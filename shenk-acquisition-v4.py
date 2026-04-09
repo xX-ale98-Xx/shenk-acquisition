@@ -331,10 +331,10 @@ class App:
             messagebox.showinfo("Salvataggio Completato", "I dati sono stati salvati correttamente.")
 
     def zero_pos(self):
-        self.zeropos = self.pos_var.get()
+        self.zeropos = self.abs_pos_var.get()
 
     def zero_force(self):
-        self.zeroforce = self.carico_var.get()
+        self.zeroforce = self.carico_var.get() + self.zeroforce
 
     def on_closing(self):
         """Handle the window close event."""
